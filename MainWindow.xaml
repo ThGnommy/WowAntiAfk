@@ -1,0 +1,22 @@
+﻿<Window x:Class="Wow_Anti_Afk.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wow_Anti_Afk"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="400"
+        ResizeMode="CanMinimize">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Start_Anti_Afk" Content="START ANTI AFK" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top" Width="150" Height="35" Click="StartAntiAFK"/>
+        <Button Content="Auto Left Click" HorizontalAlignment="Left" Margin="26.8,102,0,0" VerticalAlignment="Top" Width="150" Height="35" Grid.Column="1" IsCancel="True"/>
+        <Button x:Name="Stop_Anti_Afk" Content="STOP ANTI AFK" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" Width="150" Height="35" Click="StopAntiAfk"/>
+        <Button Content="Stop Auto Click" HorizontalAlignment="Left" Margin="26.8,154,0,0" VerticalAlignment="Top" Width="150" Height="35" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Left" TextAlignment="Center" Margin="10,10,0,0" TextWrapping="Wrap" Text="Wow Anti AFK" VerticalAlignment="Top" Height="44" Width="374" FlowDirection="RightToLeft" FontSize="36" FontFamily="Segoe UI Semibold" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

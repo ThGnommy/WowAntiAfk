@@ -1,0 +1,18 @@
+C:\Users\gnomm\Documents\Wow Anti Afk\bin\Debug\Wow Anti Afk.exe.config
+C:\Users\gnomm\Documents\Wow Anti Afk\bin\Debug\Wow Anti Afk.exe
+C:\Users\gnomm\Documents\Wow Anti Afk\bin\Debug\Wow Anti Afk.pdb
+C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\Wow Anti Afk.csprojAssemblyReference.cache
+C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\MainWindow.g.cs
+C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\App.g.cs
+C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\Wow Anti Afk_MarkupCompile.cache
+C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\Wow Anti Afk_MarkupCompile.lref
+C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\MainWindow.baml
+C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\Wow Anti Afk.g.resources
+C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\Wow_Anti_Afk.Properties.Resources.resources
+C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\Wow Anti Afk.csproj.GenerateResource.cache
+C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\Wow Anti Afk.csproj.CoreCompileInputs.cache
+C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\Wow Anti Afk.exe
+C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\Wow Anti Afk.pdb
+C:\Users\gnomm\Documents\Wow Anti Afk\bin\Debug\WindowsInput.dll
+C:\Users\gnomm\Documents\Wow Anti Afk\bin\Debug\WindowsInput.xml
+C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\Wow Anti Afk.csproj.CopyComplete
