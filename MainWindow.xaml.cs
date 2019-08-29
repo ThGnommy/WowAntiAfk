@@ -1,18 +1,7 @@
 ﻿using System;
 using System.Threading;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using WindowsInput.Native;
 using WindowsInput;
 
@@ -24,15 +13,20 @@ namespace Wow_Anti_Afk
     public partial class MainWindow : Window
     {
         int s = 0;
+        int s_click = 0;
         InputSimulator sim = new InputSimulator();
         CancellationTokenSource cts = new CancellationTokenSource();
+        CancellationTokenSource cts_click = new CancellationTokenSource();
 
         public MainWindow()
         {
             InitializeComponent();
 
             Stop_Anti_Afk.IsEnabled = false;
+            Stop_Click.IsEnabled = false;
         }
+
+        // KEYBOARD BUTTONS ********************************************************
 
         public async void TaskDelay(CancellationToken token)
         {
@@ -73,17 +67,45 @@ namespace Wow_Anti_Afk
             Stop_Anti_Afk.IsEnabled = false;
         }
 
-        private void Start_Left_Click(object sender, RoutedEventArgs e)
-        {
+        // CLICK BUTTONS ********************************************************
 
+        public async void ClickTaskDelay(CancellationToken token)
+        {
+            while (s_click == 1)
+            {
+
+                sim.Mouse.RightButtonClick();
+
+                if (s_click == 0)
+                {
+                    break;
+                }
+
+                try
+                {
+                    await Task.Delay(10000, token);
+                }
+
+                catch (TaskCanceledException ex)
+                {
+                    return;
+                }
+
+            }
         }
 
-        private void Stop_Left_Click(object sender, RoutedEventArgs e)
+        private void Start_Right_Click(object sender, RoutedEventArgs e)
         {
+            s_click = 1;
+            ClickTaskDelay(cts_click.Token);
+            Stop_Click.IsEnabled = true;
+        }
 
+        private void Stop_Right_Click(object sender, RoutedEventArgs e)
+        {
+            s_click = 0;
+            cts_click.Cancel();
+            Stop_Click.IsEnabled = false;
         }
     }
 }
-
-
-

@@ -4,6 +4,9 @@
              xmlns:local="clr-namespace:Wow_Anti_Afk"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style x:Key="CustomFont">
+            <Setter Property="TextElement.FontFamily"
+                    Value="/Fonts/#LifeCraft_Font"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

@@ -7,16 +7,27 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="250" Width="400"
         ResizeMode="CanMinimize">
+    <Window.Background>
+        <ImageBrush ImageSource="img/warlock1.jpg"/>
+    </Window.Background>
     <Grid Margin="10">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="Start_Anti_Afk" Content="START ANTI AFK" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top" Width="150" Height="35" Click="StartAntiAFK"/>
-        <Button x:Name="Start_Click" Content="Auto Left Click" HorizontalAlignment="Left" Margin="26.8,102,0,0" VerticalAlignment="Top" Width="150" Height="35" Grid.Column="1" IsCancel="True" Click="Start_Left_Click"/>
-        <Button x:Name="Stop_Anti_Afk" Content="STOP ANTI AFK" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" Width="150" Height="35" Click="StopAntiAfk"/>
-        <Button x:Name="Stop_Click" Content="Stop Auto Click" HorizontalAlignment="Left" Margin="26.8,154,0,0" VerticalAlignment="Top" Width="150" Height="35" Grid.Column="1" Click="Stop_Left_Click"/>
-        <TextBlock HorizontalAlignment="Left" TextAlignment="Center" Margin="10,10,0,0" TextWrapping="Wrap" Text="Wow Anti AFK" VerticalAlignment="Top" Height="44" Width="374" FlowDirection="RightToLeft" FontSize="36" FontFamily="Segoe UI Semibold" Grid.ColumnSpan="2"/>
-
+        <Button x:Name="Start_Anti_Afk" Content="Start Anti Afk" HorizontalAlignment="Left" Margin="10,102,0,0" VerticalAlignment="Top" Width="150" Height="35" Click="StartAntiAFK"/>
+        <Button x:Name="Start_Click" Content="Auto Right Click" HorizontalAlignment="Left" Margin="26.8,102,0,0" VerticalAlignment="Top" Width="150" Height="35" Grid.Column="1" IsCancel="True" Click="Start_Right_Click"/>
+        <Button x:Name="Stop_Anti_Afk" Content="Stop Anti Afk" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" Width="150" Height="35" Click="StopAntiAfk"/>
+        <Button x:Name="Stop_Click" Content="Stop Auto Click" HorizontalAlignment="Left" Margin="26.8,154,0,0" VerticalAlignment="Top" Width="150" Height="35" Grid.Column="1" Click="Stop_Right_Click"/>
+        <Label Content="WoW Anti Afk" HorizontalAlignment="Center" VerticalAlignment="Top" Height="39" Width="228.8" FontFamily="/Wow Anti Afk;component/Fonts/#LifeCraft" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="36" UseLayoutRounding="False" Grid.ColumnSpan="2" Foreground="Black" Margin="0,0,144.8,0">
+            <Label.Effect>
+                <DropShadowEffect Opacity="0.5" ShadowDepth="3"/>
+            </Label.Effect>
+        </Label>
+        <Label Content="&amp; Auto Clicker" HorizontalAlignment="Left" Margin="0.2,62,0,0" VerticalAlignment="Top" Height="35" Width="177" Grid.Column="1" FontFamily="/Wow Anti Afk;component/Fonts/#LifeCraft" FontSize="22" HorizontalContentAlignment="Center" FontStyle="Italic" Foreground="DarkRed">
+            <Label.Effect>
+                <DropShadowEffect Opacity="0.5" ShadowDepth="2" BlurRadius="2"/>
+            </Label.Effect>
+        </Label>
     </Grid>
 </Window>

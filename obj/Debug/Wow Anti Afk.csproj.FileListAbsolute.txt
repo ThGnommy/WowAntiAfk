@@ -16,3 +16,4 @@ C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\Wow Anti Afk.pdb
 C:\Users\gnomm\Documents\Wow Anti Afk\bin\Debug\WindowsInput.dll
 C:\Users\gnomm\Documents\Wow Anti Afk\bin\Debug\WindowsInput.xml
 C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\Wow Anti Afk.csproj.CopyComplete
+C:\Users\gnomm\Documents\Wow Anti Afk\obj\Debug\App.baml
