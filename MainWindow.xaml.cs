@@ -23,36 +23,64 @@ namespace Wow_Anti_Afk
     /// </summary>
     public partial class MainWindow : Window
     {
-
         int s = 0;
         InputSimulator sim = new InputSimulator();
-
+        CancellationTokenSource cts = new CancellationTokenSource();
 
         public MainWindow()
         {
             InitializeComponent();
+
+            Stop_Anti_Afk.IsEnabled = false;
         }
 
-        private async void StartAntiAFK(object sender, RoutedEventArgs e)
+        public async void TaskDelay(CancellationToken token)
         {
-            s = 1;
-
             while (s == 1)
             {
-                await Task.Delay(3000);
-                sim.Keyboard.KeyPress(VirtualKeyCode.SPACE);
 
-                if(s == 0)
+                sim.Keyboard.KeyPress(VirtualKeyCode.VK_Q);
+
+                if (s == 0)
                 {
                     break;
                 }
-            }
 
+                try
+                {
+                    await Task.Delay(10000, token);
+                }
+
+                catch (TaskCanceledException ex)
+                {
+                    return;
+                }
+
+            }
+        }
+
+        private void StartAntiAFK(object sender, RoutedEventArgs e)
+        {
+            s = 1;
+            TaskDelay(cts.Token);
+            Stop_Anti_Afk.IsEnabled = true;
         }
 
         private void StopAntiAfk(object sender, RoutedEventArgs e)
         {
             s = 0;
+            cts.Cancel();
+            Stop_Anti_Afk.IsEnabled = false;
+        }
+
+        private void Start_Left_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Stop_Left_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
